@@ -4,7 +4,7 @@ Battleship game in Javascript, using jQuery
 Instrukcja:
 Klasyczna gra w statki. Wygrywa ta osoba co zestrzeli statki drugiej osoby jako pierwsza.
 Sterowanie:</br>
-PPM - wybieranie kwadratu
+PPM - wybieranie kwadratu </br>
 LPM - anulowanie wyboru
 G - wymazywanie
 S - ustawianie statkow
