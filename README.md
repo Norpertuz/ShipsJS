@@ -1,29 +1,32 @@
 # ShipsJS
 Battleship game in Javascript, using jQuery
 
-Instrukcja:
-Klasyczna gra w statki. Wygrywa ta osoba co zestrzeli statki drugiej osoby jako pierwsza.
-Sterowanie:</br>
-PPM - wybieranie kwadratu </br>
-LPM - anulowanie wyboru
-G - wymazywanie
-S - ustawianie statkow
-Z - zaznaczanie statków zatopionych
-Tylko dla planszy bardzo dużej:
-V - Zmiana widoku
-L - wyświetlenie logów/menu
-Wersja Manualna: (Wersja wolna od błędów)
-1.Dana jest liczba niebieskich kwadratów,która rózni się zależnie od rozmiaru planszy.
-2.Jest również dane jakie statki można ułożyc z dostępnych niebieskich kwadratów. Np. trzy statki "dwukwadratowe" (2x3).
-3.Podana jest liczba ułożonych kwadratów niebieskich oraz pozostałych kwadratów niebieskich przeciwnika.
-4.Przegrywa ta osoba, której nie zostały żadne niebieskie kwadraty.
-5.Na większych planszach zaleca się dopuszczenie większej liczby strzałów przy posiadaniu największych statków
-np. trzy jeśli gracz nie stracił jeszcze statku siedmiokwadratowego, a gdy go straci to dwa strzały, jeśli nie stracił statków sześciokwadratowych
+<h1>Statki by Norpertuz v.1.5</h1>
+Instrukcja:<br>
+Klasyczna gra w statki. <br> Wygrywa ta osoba co zestrzeli statki drugiej osoby jako pierwsza.<br>
+Sterowanie:<br>
+PPM - wybieranie kwadratu<br>
+LPM - anulowanie wyboru<br>
+G - wymazywanie <br>
+S - ustawianie statkow<br>
+Z - zaznaczanie statków zatopionych <br>
+Tylko dla planszy bardzo dużej:<br>
+V - Zmiana widoku<br>
+L - wyświetlenie logów/menu<br><br>
+Wersja Manualna: (Wersja wolna od błędów) <br>
+1.Dana jest liczba niebieskich kwadratów,która rózni się zależnie od rozmiaru planszy.<br>
+2.Jest również dane jakie statki można ułożyc z dostępnych niebieskich kwadratów. Np. trzy statki "dwukwadratowe" (2x3)<br>
+3.Podana jest liczba ułożonych kwadratów niebieskich oraz pozostałych kwadratów niebieskich przeciwnika.<br>
+4.Przegrywa ta osoba, której nie zostały żadne niebieskie kwadraty. <br>
+5.Na większych planszach zaleca się dopuszczenie większej liczby strzałów przy posiadaniu największych statków, <br>
+np. trzy jeśli gracz nie stracił jeszcze statku siedmiokwadratowego, a gdy go straci to dwa strzały, jeśli nie stracił statków sześciokwadratowych<br>
 
 Wersja Automatyczna (beta) <br>
-1.Po wybraniu kwadratu należy nacisnąć przycisk zatwierdz.
-2.Następnie czekać na odpowiedź kilkając przycisk odpowiadający za sprawdzenie czy udało się trafić.
-3.Potem oczekiwać na ruch przeciwnika klikając przycisk,<br> sprawdzający czy druga osoba wykonała ruch.
+1.Po wybraniu kwadratu należy nacisnąć przycisk zatwierdz.<br>
+2.Następnie czekać na odpowiedź kilkając przycisk odpowiadający za sprawdzenie czy udało się trafić.<br>
+3.Potem oczekiwać na ruch przeciwnika klikając przycisk,<br> sprawdzający czy druga osoba wykonała ruch. <br>
+
+
 
 Changelog:
 21/11/2018 - Początek. 
