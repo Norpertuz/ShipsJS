@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>BardzoDuzaPlansza</title>
+<style type="text/css">
+body {
+font-family: Sans-Serif;
+color:#333;
+ background-image:url("m2.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+
+#plansza
+{
+ background-image:url("tlo.gif");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color:lightgray;
+float:left;
+width:1850px;
+height:1050px;
+border: 2px solid black;
+margin-bottom:10px;
+visibility:hidden;
+}
+#plansza1
+{
+ background-image:url("tlop.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+float:left;
+width:1850px;
+height:1050px;
+border: 2px solid black;
+margin-bottom:10px;
+visibility:hidden;
+}
+.prostokat
+{
+border: 2px solid black;
+height:50px;
+width:50px;
+float:left;
+margin: 3px;
+background-color:white;
+}
+
+.prostokat:hover{
+cursor: pointer;
+
+}
+.Pprostokat
+{
+border: 2px solid black;
+height:50px;
+width:50px;
+float:left;
+margin: 3px;
+background-color:white;
+}
+
+.Pprostokat:hover{
+cursor: pointer;
+
+}
+.cyfra
+{
+border: 2px solid black;
+height:20px;
+width:50px;
+float:left;
+margin: 3px;
+font-weight:bold;
+}
+.litera
+{
+border: 2px solid black;
+height:50px;
+width:20px;
+float:left;
+margin:3px;
+margin-left:6px;
+font-weight:bold;
+}
+
+
+/*this is only for webkit, not opera*/
+input[type='range'] {
+	-webkit-appearance: none;
+	padding-left: 2px;
+	padding-right: 2px;
+	-webkit-border-radius: 5px;  
+	background-image: -webkit-linear-gradient(top, #000, #333, #0000;
+}  
+
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="manual.js"></script>
+</head>
+<body>
+
+
+<div id="logs" style=" z-index: 3;visibility:visible;position:absolute;left:100px;width:80%;padding:10px;height:50%;background-color:lightgray; font-size:20px; opacity:0.9; border: 2px solid black; color:black;">
+Logs:<br>
+Ostatnie Zdarzenie: <div id="log"></div><br>
+<div id="ilosc_statki"></div><br>
+<div id="niebieskie"></div><br>
+<div id="zostalo"></div><br>
+<button id="nowa" style="width:300px;height:100px;">Nowa Gra</button> <br> <br>
+<button id="p3" style="width:300px;height:100px;">Przełącz widok</button> <br> <br>
+
+</div>
+
+
+<div id="container" style="height:1500px;float:left;width:100%;">
+
+<div id = "plansza1"> 
+<center>
+<h1>Strzelanie</h1>
+<div class="cyfra"  style="margin-left: 36px;">1</div>
+<div class="cyfra">2</div>
+<div class="cyfra">3</div>
+<div class="cyfra">4</div>
+<div class="cyfra">5</div>
+<div class="cyfra">6</div>
+<div class="cyfra">7</div>
+<div class="cyfra">8</div>
+<div class="cyfra">9</div>
+<div class="cyfra">10</div>
+<div class="cyfra">11</div>
+<div class="cyfra">12</div>
+<div class="cyfra">13</div>
+<div class="cyfra">14</div>
+<div class="cyfra">15</div>
+<div class="cyfra">16</div>
+<div class="cyfra">17</div>
+<div class="cyfra">18</div>
+<div class="cyfra">19</div>
+<div class="cyfra">20</div>
+<div class="cyfra">21</div>
+<div class="cyfra">22</div>
+<div class="cyfra">23</div>
+<div class="cyfra">24</div>
+<div class="cyfra">25</div>
+<div class="cyfra">26</div>
+<div class="cyfra">27</div>
+<div class="cyfra">28</div>
+<div class="cyfra">29</div>
+<div class="cyfra">30</div>
+<div class="litera"><br>A</div>
+<div class="Pprostokat" id="PA_jeden" ></div>
+<div class="Pprostokat" id="PA_dwa"></div>
+<div class="Pprostokat" id="PA_trzy"></div>
+<div class="Pprostokat" id="PA_cztery"></div>
+<div class="Pprostokat" id="PA_piec" ></div>
+<div class="Pprostokat" id="PA_szesc"></div>
+<div class="Pprostokat" id="PA_siedem"></div>
+<div class="Pprostokat" id="PA_osiem" ></div>
+<div class="Pprostokat" id="PA_dziewiec"></div>
+<div class="Pprostokat" id="PA_dziesiec"></div>
+<div class="Pprostokat" id="PA_jedenasicie" ></div>
+<div class="Pprostokat" id="PA_dwanascie"></div>
+<div class="Pprostokat" id="PA_trzynascie"></div>
+<div class="Pprostokat" id="PA_czternascie"></div>
+<div class="Pprostokat" id="PA_pietnascie" ></div>
+<div class="Pprostokat" id="PA_szesnascie"></div>
+<div class="Pprostokat" id="PA_siedemnascie"></div>
+<div class="Pprostokat" id="PA_osiemnascie" ></div>
+<div class="Pprostokat" id="PA_dziewietnascie"></div>
+<div class="Pprostokat" id="PA_dwadziescia"></div>
+<div class="Pprostokat" id="PA_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PA_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PA_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PA_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PA_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PA_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PA_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PA_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PA_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PA_trzydziesci"></div>
+<div class="litera"><br>B</div>
+<div class="Pprostokat" id="PB_jeden"></div>
+<div class="Pprostokat" id="PB_dwa"></div>
+<div class="Pprostokat" id="PB_trzy"></div>
+<div class="Pprostokat" id="PB_cztery"></div>
+<div class="Pprostokat" id="PB_piec" ></div>
+<div class="Pprostokat" id="PB_szesc"></div>
+<div class="Pprostokat" id="PB_siedem"></div>
+<div class="Pprostokat" id="PB_osiem" ></div>
+<div class="Pprostokat" id="PB_dziewiec"></div>
+<div class="Pprostokat" id="PB_dziesiec"></div>
+<div class="Pprostokat" id="PB_jedenasicie" ></div>
+<div class="Pprostokat" id="PB_dwanascie"></div>
+<div class="Pprostokat" id="PB_trzynascie"></div>
+<div class="Pprostokat" id="PB_czternascie"></div>
+<div class="Pprostokat" id="PB_pietnascie" ></div>
+<div class="Pprostokat" id="PB_szesnascie"></div>
+<div class="Pprostokat" id="PB_siedemnascie"></div>
+<div class="Pprostokat" id="PB_osiemnascie" ></div>
+<div class="Pprostokat" id="PB_dziewietnascie"></div>
+<div class="Pprostokat" id="PB_dwadziescia"></div>
+<div class="Pprostokat" id="PB_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PB_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PB_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PB_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PB_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PB_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PB_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PB_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PB_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PB_trzydziesci"></div>
+<div class="litera"><br>C</div>
+<div class="Pprostokat" id="PC_jeden"></div>
+<div class="Pprostokat" id="PC_dwa"></div>
+<div class="Pprostokat" id="PC_trzy"></div>
+<div class="Pprostokat" id="PC_cztery"></div>
+<div class="Pprostokat" id="PC_piec" ></div>
+<div class="Pprostokat" id="PC_szesc"></div>
+<div class="Pprostokat" id="PC_siedem"></div>
+<div class="Pprostokat" id="PC_osiem" ></div>
+<div class="Pprostokat" id="PC_dziewiec"></div>
+<div class="Pprostokat" id="PC_dziesiec"></div>
+<div class="Pprostokat" id="PC_jedenasicie" ></div>
+<div class="Pprostokat" id="PC_dwanascie"></div>
+<div class="Pprostokat" id="PC_trzynascie"></div>
+<div class="Pprostokat" id="PC_czternascie"></div>
+<div class="Pprostokat" id="PC_pietnascie" ></div>
+<div class="Pprostokat" id="PC_szesnascie"></div>
+<div class="Pprostokat" id="PC_siedemnascie"></div>
+<div class="Pprostokat" id="PC_osiemnascie" ></div>
+<div class="Pprostokat" id="PC_dziewietnascie"></div>
+<div class="Pprostokat" id="PC_dwadziescia"></div>
+<div class="Pprostokat" id="PC_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PC_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PC_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PC_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PC_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PC_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PC_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PC_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PC_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PC_trzydziesci"></div>
+<div class="litera"><br>D</div>
+<div class="Pprostokat" id="PD_jeden"></div>
+<div class="Pprostokat" id="PD_dwa"></div>
+<div class="Pprostokat" id="PD_trzy"></div>
+<div class="Pprostokat" id="PD_cztery"></div>
+<div class="Pprostokat" id="PD_piec" ></div>
+<div class="Pprostokat" id="PD_szesc"></div>
+<div class="Pprostokat" id="PD_siedem"></div>
+<div class="Pprostokat" id="PD_osiem" ></div>
+<div class="Pprostokat" id="PD_dziewiec"></div>
+<div class="Pprostokat" id="PD_dziesiec"></div>
+<div class="Pprostokat" id="PD_jedenasicie" ></div>
+<div class="Pprostokat" id="PD_dwanascie"></div>
+<div class="Pprostokat" id="PD_trzynascie"></div>
+<div class="Pprostokat" id="PD_czternascie"></div>
+<div class="Pprostokat" id="PD_pietnascie" ></div>
+<div class="Pprostokat" id="PD_szesnascie"></div>
+<div class="Pprostokat" id="PD_siedemnascie"></div>
+<div class="Pprostokat" id="PD_osiemnascie" ></div>
+<div class="Pprostokat" id="PD_dziewietnascie"></div>
+<div class="Pprostokat" id="PD_dwadziescia"></div>
+<div class="Pprostokat" id="PD_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PD_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PD_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PD_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PD_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PD_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PD_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PD_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PD_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PD_trzydziesci"></div>
+<div class="litera"><br>E</div>
+<div class="Pprostokat" id="PE_jeden"></div>
+<div class="Pprostokat" id="PE_dwa"></div>
+<div class="Pprostokat" id="PE_trzy"></div>
+<div class="Pprostokat" id="PE_cztery"></div>
+<div class="Pprostokat" id="PE_piec" ></div>
+<div class="Pprostokat" id="PE_szesc"></div>
+<div class="Pprostokat" id="PE_siedem"></div>
+<div class="Pprostokat" id="PE_osiem" ></div>
+<div class="Pprostokat" id="PE_dziewiec"></div>
+<div class="Pprostokat" id="PE_dziesiec"></div>
+<div class="Pprostokat" id="PE_jedenasicie" ></div>
+<div class="Pprostokat" id="PE_dwanascie"></div>
+<div class="Pprostokat" id="PE_trzynascie"></div>
+<div class="Pprostokat" id="PE_czternascie"></div>
+<div class="Pprostokat" id="PE_pietnascie" ></div>
+<div class="Pprostokat" id="PE_szesnascie"></div>
+<div class="Pprostokat" id="PE_siedemnascie"></div>
+<div class="Pprostokat" id="PE_osiemnascie" ></div>
+<div class="Pprostokat" id="PE_dziewietnascie"></div>
+<div class="Pprostokat" id="PE_dwadziescia"></div>
+<div class="Pprostokat" id="PE_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PE_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PE_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PE_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PE_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PE_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PE_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PE_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PE_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PE_trzydziesci"></div>
+<div class="litera"><br>F</div>
+<div class="Pprostokat" id="PF_jeden"></div>
+<div class="Pprostokat" id="PF_dwa"></div>
+<div class="Pprostokat" id="PF_trzy"></div>
+<div class="Pprostokat" id="PF_cztery"></div>
+<div class="Pprostokat" id="PF_piec" ></div>
+<div class="Pprostokat" id="PF_szesc"></div>
+<div class="Pprostokat" id="PF_siedem"></div>
+<div class="Pprostokat" id="PF_osiem" ></div>
+<div class="Pprostokat" id="PF_dziewiec"></div>
+<div class="Pprostokat" id="PF_dziesiec"></div>
+<div class="Pprostokat" id="PF_jedenasicie" ></div>
+<div class="Pprostokat" id="PF_dwanascie"></div>
+<div class="Pprostokat" id="PF_trzynascie"></div>
+<div class="Pprostokat" id="PF_czternascie"></div>
+<div class="Pprostokat" id="PF_pietnascie" ></div>
+<div class="Pprostokat" id="PF_szesnascie"></div>
+<div class="Pprostokat" id="PF_siedemnascie"></div>
+<div class="Pprostokat" id="PF_osiemnascie" ></div>
+<div class="Pprostokat" id="PF_dziewietnascie"></div>
+<div class="Pprostokat" id="PF_dwadziescia"></div>
+<div class="Pprostokat" id="PF_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PF_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PF_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PF_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PF_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PF_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PF_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PF_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PF_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PF_trzydziesci"></div>
+<div class="litera"><br>G</div>
+<div class="Pprostokat" id="PG_jeden"></div>
+<div class="Pprostokat" id="PG_dwa"></div>
+<div class="Pprostokat" id="PG_trzy"></div>
+<div class="Pprostokat" id="PG_cztery"></div>
+<div class="Pprostokat" id="PG_piec" ></div>
+<div class="Pprostokat" id="PG_szesc"></div>
+<div class="Pprostokat" id="PG_siedem"></div>
+<div class="Pprostokat" id="PG_osiem" ></div>
+<div class="Pprostokat" id="PG_dziewiec"></div>
+<div class="Pprostokat" id="PG_dziesiec"></div>
+<div class="Pprostokat" id="PG_jedenasicie" ></div>
+<div class="Pprostokat" id="PG_dwanascie"></div>
+<div class="Pprostokat" id="PG_trzynascie"></div>
+<div class="Pprostokat" id="PG_czternascie"></div>
+<div class="Pprostokat" id="PG_pietnascie" ></div>
+<div class="Pprostokat" id="PG_szesnascie"></div>
+<div class="Pprostokat" id="PG_siedemnascie"></div>
+<div class="Pprostokat" id="PG_osiemnascie" ></div>
+<div class="Pprostokat" id="PG_dziewietnascie"></div>
+<div class="Pprostokat" id="PG_dwadziescia"></div>
+<div class="Pprostokat" id="PG_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PG_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PG_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PG_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PG_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PG_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PG_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PG_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PG_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PG_trzydziesci"></div>
+<div class="litera"><br>H</div>
+<div class="Pprostokat" id="PH_jeden"></div>
+<div class="Pprostokat" id="PH_dwa"></div>
+<div class="Pprostokat" id="PH_trzy"></div>
+<div class="Pprostokat" id="PH_cztery"></div>
+<div class="Pprostokat" id="PH_piec" ></div>
+<div class="Pprostokat" id="PH_szesc"></div>
+<div class="Pprostokat" id="PH_siedem"></div>
+<div class="Pprostokat" id="PH_osiem" ></div>
+<div class="Pprostokat" id="PH_dziewiec"></div>
+<div class="Pprostokat" id="PH_dziesiec"></div>
+<div class="Pprostokat" id="PH_jedenasicie" ></div>
+<div class="Pprostokat" id="PH_dwanascie"></div>
+<div class="Pprostokat" id="PH_trzynascie"></div>
+<div class="Pprostokat" id="PH_czternascie"></div>
+<div class="Pprostokat" id="PH_pietnascie" ></div>
+<div class="Pprostokat" id="PH_szesnascie"></div>
+<div class="Pprostokat" id="PH_siedemnascie"></div>
+<div class="Pprostokat" id="PH_osiemnascie" ></div>
+<div class="Pprostokat" id="PH_dziewietnascie"></div>
+<div class="Pprostokat" id="PH_dwadziescia"></div>
+<div class="Pprostokat" id="PH_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PH_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PH_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PH_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PH_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PH_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PH_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PH_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PH_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PH_trzydziesci"></div>
+<div class="litera"><br>I</div>
+<div class="Pprostokat" id="PI_jeden"></div>
+<div class="Pprostokat" id="PI_dwa"></div>
+<div class="Pprostokat" id="PI_trzy"></div>
+<div class="Pprostokat" id="PI_cztery"></div>
+<div class="Pprostokat" id="PI_piec" ></div>
+<div class="Pprostokat" id="PI_szesc"></div>
+<div class="Pprostokat" id="PI_siedem"></div>
+<div class="Pprostokat" id="PI_osiem" ></div>
+<div class="Pprostokat" id="PI_dziewiec"></div>
+<div class="Pprostokat" id="PI_dziesiec"></div>
+<div class="Pprostokat" id="PI_jedenasicie" ></div>
+<div class="Pprostokat" id="PI_dwanascie"></div>
+<div class="Pprostokat" id="PI_trzynascie"></div>
+<div class="Pprostokat" id="PI_czternascie"></div>
+<div class="Pprostokat" id="PI_pietnascie" ></div>
+<div class="Pprostokat" id="PI_szesnascie"></div>
+<div class="Pprostokat" id="PI_siedemnascie"></div>
+<div class="Pprostokat" id="PI_osiemnascie" ></div>
+<div class="Pprostokat" id="PI_dziewietnascie"></div>
+<div class="Pprostokat" id="PI_dwadziescia"></div>
+<div class="Pprostokat" id="PI_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PI_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PI_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PI_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PI_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PI_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PI_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PI_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PI_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PI_trzydziesci"></div>
+<div class="litera"><br>J</div>
+<div class="Pprostokat" id="PJ_jeden"></div>
+<div class="Pprostokat" id="PJ_dwa"></div>
+<div class="Pprostokat" id="PJ_trzy"></div>
+<div class="Pprostokat" id="PJ_cztery"></div>
+<div class="Pprostokat" id="PJ_piec" ></div>
+<div class="Pprostokat" id="PJ_szesc"></div>
+<div class="Pprostokat" id="PJ_siedem"></div>
+<div class="Pprostokat" id="PJ_osiem" ></div>
+<div class="Pprostokat" id="PJ_dziewiec"></div>
+<div class="Pprostokat" id="PJ_dziesiec"></div>
+<div class="Pprostokat" id="PJ_jedenasicie" ></div>
+<div class="Pprostokat" id="PJ_dwanascie"></div>
+<div class="Pprostokat" id="PJ_trzynascie"></div>
+<div class="Pprostokat" id="PJ_czternascie"></div>
+<div class="Pprostokat" id="PJ_pietnascie" ></div>
+<div class="Pprostokat" id="PJ_szesnascie"></div>
+<div class="Pprostokat" id="PJ_siedemnascie"></div>
+<div class="Pprostokat" id="PJ_osiemnascie" ></div>
+<div class="Pprostokat" id="PJ_dziewietnascie"></div>
+<div class="Pprostokat" id="PJ_dwadziescia"></div>
+<div class="Pprostokat" id="PJ_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PJ_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PJ_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PJ_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PJ_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PJ_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PJ_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PJ_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PJ_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PJ_trzydziesci"></div>
+<div class="litera"><br>K</div>
+<div class="Pprostokat" id="PK_jeden"></div>
+<div class="Pprostokat" id="PK_dwa"></div>
+<div class="Pprostokat" id="PK_trzy"></div>
+<div class="Pprostokat" id="PK_cztery"></div>
+<div class="Pprostokat" id="PK_piec" ></div>
+<div class="Pprostokat" id="PK_szesc"></div>
+<div class="Pprostokat" id="PK_siedem"></div>
+<div class="Pprostokat" id="PK_osiem" ></div>
+<div class="Pprostokat" id="PK_dziewiec"></div>
+<div class="Pprostokat" id="PK_dziesiec"></div>
+<div class="Pprostokat" id="PK_jedenascie"></div>
+<div class="Pprostokat" id="PK_dwanascie"></div>
+<div class="Pprostokat" id="PK_trzynascie"></div>
+<div class="Pprostokat" id="PK_czternascie"></div>
+<div class="Pprostokat" id="PK_pietnascie"></div>
+<div class="Pprostokat" id="PK_szesnascie"></div>
+<div class="Pprostokat" id="PK_siedemnascie"></div>
+<div class="Pprostokat" id="PK_osiemnascie"></div>
+<div class="Pprostokat" id="PK_dziewietnascie"></div>
+<div class="Pprostokat" id="PK_dwadziescia"></div>
+<div class="Pprostokat" id="PK_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PK_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PK_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PK_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PK_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PK_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PK_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PK_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PK_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PK_trzydziesci"></div>
+<div class="litera"><br>L</div>
+<div class="Pprostokat" id="PL_jeden"></div>
+<div class="Pprostokat" id="PL_dwa"></div>
+<div class="Pprostokat" id="PL_trzy"></div>
+<div class="Pprostokat" id="PL_cztery"></div>
+<div class="Pprostokat" id="PL_piec" ></div>
+<div class="Pprostokat" id="PL_szesc"></div>
+<div class="Pprostokat" id="PL_siedem"></div>
+<div class="Pprostokat" id="PL_osiem" ></div>
+<div class="Pprostokat" id="PL_dziewiec"></div>
+<div class="Pprostokat" id="PL_dziesiec"></div>
+<div class="Pprostokat" id="PL_jedenascie"></div>
+<div class="Pprostokat" id="PL_dwanascie"></div>
+<div class="Pprostokat" id="PL_trzynascie"></div>
+<div class="Pprostokat" id="PL_czternascie"></div>
+<div class="Pprostokat" id="PL_pietnascie"></div>
+<div class="Pprostokat" id="PL_szesnascie"></div>
+<div class="Pprostokat" id="PL_siedemnascie"></div>
+<div class="Pprostokat" id="PL_osiemnascie"></div>
+<div class="Pprostokat" id="PL_dziewietnascie"></div>
+<div class="Pprostokat" id="PL_dwadziescia"></div>
+<div class="Pprostokat" id="PL_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PL_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PL_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PL_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PL_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PL_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PL_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PL_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PL_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PL_trzydziesci"></div>
+<div class="litera"><br>M</div>
+<div class="Pprostokat" id="PM_jeden"></div>
+<div class="Pprostokat" id="PM_dwa"></div>
+<div class="Pprostokat" id="PM_trzy"></div>
+<div class="Pprostokat" id="PM_cztery"></div>
+<div class="Pprostokat" id="PM_piec" ></div>
+<div class="Pprostokat" id="PM_szesc"></div>
+<div class="Pprostokat" id="PM_siedem"></div>
+<div class="Pprostokat" id="PM_osiem" ></div>
+<div class="Pprostokat" id="PM_dziewiec"></div>
+<div class="Pprostokat" id="PM_dziesiec"></div>
+<div class="Pprostokat" id="PM_jedenascie"></div>
+<div class="Pprostokat" id="PM_dwanascie"></div>
+<div class="Pprostokat" id="PM_trzynascie"></div>
+<div class="Pprostokat" id="PM_czternascie"></div>
+<div class="Pprostokat" id="PM_pietnascie"></div>
+<div class="Pprostokat" id="PM_szesnascie"></div>
+<div class="Pprostokat" id="PM_siedemnascie"></div>
+<div class="Pprostokat" id="PM_osiemnascie"></div>
+<div class="Pprostokat" id="PM_dziewietnascie"></div>
+<div class="Pprostokat" id="PM_dwadziescia"></div>
+<div class="Pprostokat" id="PM_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PM_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PM_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PM_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PM_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PM_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PM_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PM_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PM_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PM_trzydziesci"></div>
+<div class="litera"><br>N</div>
+<div class="Pprostokat" id="PN_jeden"></div>
+<div class="Pprostokat" id="PN_dwa"></div>
+<div class="Pprostokat" id="PN_trzy"></div>
+<div class="Pprostokat" id="PN_cztery"></div>
+<div class="Pprostokat" id="PN_piec" ></div>
+<div class="Pprostokat" id="PN_szesc"></div>
+<div class="Pprostokat" id="PN_siedem"></div>
+<div class="Pprostokat" id="PN_osiem" ></div>
+<div class="Pprostokat" id="PN_dziewiec"></div>
+<div class="Pprostokat" id="PN_dziesiec"></div>
+<div class="Pprostokat" id="PN_jedenascie"></div>
+<div class="Pprostokat" id="PN_dwanascie"></div>
+<div class="Pprostokat" id="PN_trzynascie"></div>
+<div class="Pprostokat" id="PN_czternascie"></div>
+<div class="Pprostokat" id="PN_pietnascie"></div>
+<div class="Pprostokat" id="PN_szesnascie"></div>
+<div class="Pprostokat" id="PN_siedemnascie"></div>
+<div class="Pprostokat" id="PN_osiemnascie"></div>
+<div class="Pprostokat" id="PN_dziewietnascie"></div>
+<div class="Pprostokat" id="PN_dwadziescia"></div>
+<div class="Pprostokat" id="PN_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PN_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PN_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PN_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PN_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PN_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PN_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PN_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PN_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PN_trzydziesci"></div>
+<div class="litera"><br>O</div>
+<div class="Pprostokat" id="PO_jeden"></div>
+<div class="Pprostokat" id="PO_dwa"></div>
+<div class="Pprostokat" id="PO_trzy"></div>
+<div class="Pprostokat" id="PO_cztery"></div>
+<div class="Pprostokat" id="PO_piec" ></div>
+<div class="Pprostokat" id="PO_szesc"></div>
+<div class="Pprostokat" id="PO_siedem"></div>
+<div class="Pprostokat" id="PO_osiem" ></div>
+<div class="Pprostokat" id="PO_dziewiec"></div>
+<div class="Pprostokat" id="PO_dziesiec"></div>
+<div class="Pprostokat" id="PO_jedenascie"></div>
+<div class="Pprostokat" id="PO_dwanascie"></div>
+<div class="Pprostokat" id="PO_trzynascie"></div>
+<div class="Pprostokat" id="PO_czternascie"></div>
+<div class="Pprostokat" id="PO_pietnascie"></div>
+<div class="Pprostokat" id="PO_szesnascie"></div>
+<div class="Pprostokat" id="PO_siedemnascie"></div>
+<div class="Pprostokat" id="PO_osiemnascie"></div>
+<div class="Pprostokat" id="PO_dziewietnascie"></div>
+<div class="Pprostokat" id="PO_dwadziescia"></div>
+<div class="Pprostokat" id="PO_dwadziesciajeden"></div>
+<div class="Pprostokat" id="PO_dwadziesciadwa"></div>
+<div class="Pprostokat" id="PO_dwadziesciatrzy"></div>
+<div class="Pprostokat" id="PO_dwadziesciacztery"></div>
+<div class="Pprostokat" id="PO_dwadziesciapiec"></div>
+<div class="Pprostokat" id="PO_dwadziesciaszesc"></div>
+<div class="Pprostokat" id="PO_dwadziesciasiedem"></div>
+<div class="Pprostokat" id="PO_dwadziesciaosiem"></div>
+<div class="Pprostokat" id="PO_dwadziesciadziewiec"></div>
+<div class="Pprostokat" id="PO_trzydziesci"></div>
+</div>
+</center>
+
+
+
+
+
+
+<div id = "plansza"> 
+<center>
+<h1>Twoja Plansza</h1>
+<div class="cyfra"  style="margin-left: 36px;">1</div>
+<div class="cyfra">2</div>
+<div class="cyfra">3</div>
+<div class="cyfra">4</div>
+<div class="cyfra">5</div>
+<div class="cyfra">6</div>
+<div class="cyfra">7</div>
+<div class="cyfra">8</div>
+<div class="cyfra">9</div>
+<div class="cyfra">10</div>
+<div class="cyfra">11</div>
+<div class="cyfra">12</div>
+<div class="cyfra">13</div>
+<div class="cyfra">14</div>
+<div class="cyfra">15</div>
+<div class="cyfra">16</div>
+<div class="cyfra">17</div>
+<div class="cyfra">18</div>
+<div class="cyfra">19</div>
+<div class="cyfra">20</div>
+<div class="cyfra">21</div>
+<div class="cyfra">22</div>
+<div class="cyfra">23</div>
+<div class="cyfra">24</div>
+<div class="cyfra">25</div>
+<div class="cyfra">26</div>
+<div class="cyfra">27</div>
+<div class="cyfra">28</div>
+<div class="cyfra">29</div>
+<div class="cyfra">30</div>
+<div class="litera"><br>A</div>
+<div class="prostokat" id="A_jeden" ></div>
+<div class="prostokat" id="A_dwa"></div>
+<div class="prostokat" id="A_trzy"></div>
+<div class="prostokat" id="A_cztery"></div>
+<div class="prostokat" id="A_piec" ></div>
+<div class="prostokat" id="A_szesc"></div>
+<div class="prostokat" id="A_siedem"></div>
+<div class="prostokat" id="A_osiem" ></div>
+<div class="prostokat" id="A_dziewiec"></div>
+<div class="prostokat" id="A_dziesiec"></div>
+<div class="prostokat" id="A_jedenascie"></div>
+<div class="prostokat" id="A_dwanascie"></div>
+<div class="prostokat" id="A_trzynascie"></div>
+<div class="prostokat" id="A_czternascie"></div>
+<div class="prostokat" id="A_pietnascie"></div>
+<div class="prostokat" id="A_szesnascie"></div>
+<div class="prostokat" id="A_siedemnascie"></div>
+<div class="prostokat" id="A_osiemnascie"></div>
+<div class="prostokat" id="A_dziewietnascie"></div>
+<div class="prostokat" id="A_dwadziescia"></div>
+<div class="prostokat" id="A_dwadziesciajeden"></div>
+<div class="prostokat" id="A_dwadziesciadwa"></div>
+<div class="prostokat" id="A_dwadziesciatrzy"></div>
+<div class="prostokat" id="A_dwadziesciacztery"></div>
+<div class="prostokat" id="A_dwadziesciapiec"></div>
+<div class="prostokat" id="A_dwadziesciaszesc"></div>
+<div class="prostokat" id="A_dwadziesciasiedem"></div>
+<div class="prostokat" id="A_dwadziesciaosiem"></div>
+<div class="prostokat" id="A_dwadziesciadziewiec"></div>
+<div class="prostokat" id="A_trzydziesci"></div>
+<div class="litera"><br>B</div>
+<div class="prostokat" id="B_jeden"></div>
+<div class="prostokat" id="B_dwa"></div>
+<div class="prostokat" id="B_trzy"></div>
+<div class="prostokat" id="B_cztery"></div>
+<div class="prostokat" id="B_piec" ></div>
+<div class="prostokat" id="B_szesc"></div>
+<div class="prostokat" id="B_siedem"></div>
+<div class="prostokat" id="B_osiem" ></div>
+<div class="prostokat" id="B_dziewiec"></div>
+<div class="prostokat" id="B_dziesiec"></div>
+<div class="prostokat" id="B_jedenascie"></div>
+<div class="prostokat" id="B_dwanascie"></div>
+<div class="prostokat" id="B_trzynascie"></div>
+<div class="prostokat" id="B_czternascie"></div>
+<div class="prostokat" id="B_pietnascie"></div>
+<div class="prostokat" id="B_szesnascie"></div>
+<div class="prostokat" id="B_siedemnascie"></div>
+<div class="prostokat" id="B_osiemnascie"></div>
+<div class="prostokat" id="B_dziewietnascie"></div>
+<div class="prostokat" id="B_dwadziescia"></div>
+<div class="prostokat" id="B_dwadziesciajeden"></div>
+<div class="prostokat" id="B_dwadziesciadwa"></div>
+<div class="prostokat" id="B_dwadziesciatrzy"></div>
+<div class="prostokat" id="B_dwadziesciacztery"></div>
+<div class="prostokat" id="B_dwadziesciapiec"></div>
+<div class="prostokat" id="B_dwadziesciaszesc"></div>
+<div class="prostokat" id="B_dwadziesciasiedem"></div>
+<div class="prostokat" id="B_dwadziesciaosiem"></div>
+<div class="prostokat" id="B_dwadziesciadziewiec"></div>
+<div class="prostokat" id="B_trzydziesci"></div>
+<div class="litera"><br>C</div>
+<div class="prostokat" id="C_jeden"></div>
+<div class="prostokat" id="C_dwa"></div>
+<div class="prostokat" id="C_trzy"></div>
+<div class="prostokat" id="C_cztery"></div>
+<div class="prostokat" id="C_piec" ></div>
+<div class="prostokat" id="C_szesc"></div>
+<div class="prostokat" id="C_siedem"></div>
+<div class="prostokat" id="C_osiem" ></div>
+<div class="prostokat" id="C_dziewiec"></div>
+<div class="prostokat" id="C_dziesiec"></div>
+<div class="prostokat" id="C_jedenascie"></div>
+<div class="prostokat" id="C_dwanascie"></div>
+<div class="prostokat" id="C_trzynascie"></div>
+<div class="prostokat" id="C_czternascie"></div>
+<div class="prostokat" id="C_pietnascie"></div>
+<div class="prostokat" id="C_szesnascie"></div>
+<div class="prostokat" id="C_siedemnascie"></div>
+<div class="prostokat" id="C_osiemnascie"></div>
+<div class="prostokat" id="C_dziewietnascie"></div>
+<div class="prostokat" id="C_dwadziescia"></div>
+<div class="prostokat" id="C_dwadziesciajeden"></div>
+<div class="prostokat" id="C_dwadziesciadwa"></div>
+<div class="prostokat" id="C_dwadziesciatrzy"></div>
+<div class="prostokat" id="C_dwadziesciacztery"></div>
+<div class="prostokat" id="C_dwadziesciapiec"></div>
+<div class="prostokat" id="C_dwadziesciaszesc"></div>
+<div class="prostokat" id="C_dwadziesciasiedem"></div>
+<div class="prostokat" id="C_dwadziesciaosiem"></div>
+<div class="prostokat" id="C_dwadziesciadziewiec"></div>
+<div class="prostokat" id="C_trzydziesci"></div>
+<div class="litera"><br>D</div>
+<div class="prostokat" id="D_jeden"></div>
+<div class="prostokat" id="D_dwa"></div>
+<div class="prostokat" id="D_trzy"></div>
+<div class="prostokat" id="D_cztery"></div>
+<div class="prostokat" id="D_piec" ></div>
+<div class="prostokat" id="D_szesc"></div>
+<div class="prostokat" id="D_siedem"></div>
+<div class="prostokat" id="D_osiem" ></div>
+<div class="prostokat" id="D_dziewiec"></div>
+<div class="prostokat" id="D_dziesiec"></div>
+<div class="prostokat" id="D_jedenascie"></div>
+<div class="prostokat" id="D_dwanascie"></div>
+<div class="prostokat" id="D_trzynascie"></div>
+<div class="prostokat" id="D_czternascie"></div>
+<div class="prostokat" id="D_pietnascie"></div>
+<div class="prostokat" id="D_szesnascie"></div>
+<div class="prostokat" id="D_siedemnascie"></div>
+<div class="prostokat" id="D_osiemnascie"></div>
+<div class="prostokat" id="D_dziewietnascie"></div>
+<div class="prostokat" id="D_dwadziescia"></div>
+<div class="prostokat" id="D_dwadziesciajeden"></div>
+<div class="prostokat" id="D_dwadziesciadwa"></div>
+<div class="prostokat" id="D_dwadziesciatrzy"></div>
+<div class="prostokat" id="D_dwadziesciacztery"></div>
+<div class="prostokat" id="D_dwadziesciapiec"></div>
+<div class="prostokat" id="D_dwadziesciaszesc"></div>
+<div class="prostokat" id="D_dwadziesciasiedem"></div>
+<div class="prostokat" id="D_dwadziesciaosiem"></div>
+<div class="prostokat" id="D_dwadziesciadziewiec"></div>
+<div class="prostokat" id="D_trzydziesci"></div>
+<div class="litera"><br>E</div>
+<div class="prostokat" id="E_jeden"></div>
+<div class="prostokat" id="E_dwa"></div>
+<div class="prostokat" id="E_trzy"></div>
+<div class="prostokat" id="E_cztery"></div>
+<div class="prostokat" id="E_piec" ></div>
+<div class="prostokat" id="E_szesc"></div>
+<div class="prostokat" id="E_siedem"></div>
+<div class="prostokat" id="E_osiem" ></div>
+<div class="prostokat" id="E_dziewiec"></div>
+<div class="prostokat" id="E_dziesiec"></div>
+<div class="prostokat" id="E_jedenascie"></div>
+<div class="prostokat" id="E_dwanascie"></div>
+<div class="prostokat" id="E_trzynascie"></div>
+<div class="prostokat" id="E_czternascie"></div>
+<div class="prostokat" id="E_pietnascie"></div>
+<div class="prostokat" id="E_szesnascie"></div>
+<div class="prostokat" id="E_siedemnascie"></div>
+<div class="prostokat" id="E_osiemnascie"></div>
+<div class="prostokat" id="E_dziewietnascie"></div>
+<div class="prostokat" id="E_dwadziescia"></div>
+<div class="prostokat" id="E_dwadziesciajeden"></div>
+<div class="prostokat" id="E_dwadziesciadwa"></div>
+<div class="prostokat" id="E_dwadziesciatrzy"></div>
+<div class="prostokat" id="E_dwadziesciacztery"></div>
+<div class="prostokat" id="E_dwadziesciapiec"></div>
+<div class="prostokat" id="E_dwadziesciaszesc"></div>
+<div class="prostokat" id="E_dwadziesciasiedem"></div>
+<div class="prostokat" id="E_dwadziesciaosiem"></div>
+<div class="prostokat" id="E_dwadziesciadziewiec"></div>
+<div class="prostokat" id="E_trzydziesci"></div>
+<div class="litera"><br>F</div>
+<div class="prostokat" id="F_jeden"></div>
+<div class="prostokat" id="F_dwa"></div>
+<div class="prostokat" id="F_trzy"></div>
+<div class="prostokat" id="F_cztery"></div>
+<div class="prostokat" id="F_piec" ></div>
+<div class="prostokat" id="F_szesc"></div>
+<div class="prostokat" id="F_siedem"></div>
+<div class="prostokat" id="F_osiem" ></div>
+<div class="prostokat" id="F_dziewiec"></div>
+<div class="prostokat" id="F_dziesiec"></div>
+<div class="prostokat" id="F_jedenascie"></div>
+<div class="prostokat" id="F_dwanascie"></div>
+<div class="prostokat" id="F_trzynascie"></div>
+<div class="prostokat" id="F_czternascie"></div>
+<div class="prostokat" id="F_pietnascie"></div>
+<div class="prostokat" id="F_szesnascie"></div>
+<div class="prostokat" id="F_siedemnascie"></div>
+<div class="prostokat" id="F_osiemnascie"></div>
+<div class="prostokat" id="F_dziewietnascie"></div>
+<div class="prostokat" id="F_dwadziescia"></div>
+<div class="prostokat" id="F_dwadziesciajeden"></div>
+<div class="prostokat" id="F_dwadziesciadwa"></div>
+<div class="prostokat" id="F_dwadziesciatrzy"></div>
+<div class="prostokat" id="F_dwadziesciacztery"></div>
+<div class="prostokat" id="F_dwadziesciapiec"></div>
+<div class="prostokat" id="F_dwadziesciaszesc"></div>
+<div class="prostokat" id="F_dwadziesciasiedem"></div>
+<div class="prostokat" id="F_dwadziesciaosiem"></div>
+<div class="prostokat" id="F_dwadziesciadziewiec"></div>
+<div class="prostokat" id="F_trzydziesci"></div>
+<div class="litera"><br>G</div>
+<div class="prostokat" id="G_jeden"></div>
+<div class="prostokat" id="G_dwa"></div>
+<div class="prostokat" id="G_trzy"></div>
+<div class="prostokat" id="G_cztery"></div>
+<div class="prostokat" id="G_piec" ></div>
+<div class="prostokat" id="G_szesc"></div>
+<div class="prostokat" id="G_siedem"></div>
+<div class="prostokat" id="G_osiem" ></div>
+<div class="prostokat" id="G_dziewiec"></div>
+<div class="prostokat" id="G_dziesiec"></div>
+<div class="prostokat" id="G_jedenascie"></div>
+<div class="prostokat" id="G_dwanascie"></div>
+<div class="prostokat" id="G_trzynascie"></div>
+<div class="prostokat" id="G_czternascie"></div>
+<div class="prostokat" id="G_pietnascie"></div>
+<div class="prostokat" id="G_szesnascie"></div>
+<div class="prostokat" id="G_siedemnascie"></div>
+<div class="prostokat" id="G_osiemnascie"></div>
+<div class="prostokat" id="G_dziewietnascie"></div>
+<div class="prostokat" id="G_dwadziescia"></div>
+<div class="prostokat" id="G_dwadziesciajeden"></div>
+<div class="prostokat" id="G_dwadziesciadwa"></div>
+<div class="prostokat" id="G_dwadziesciatrzy"></div>
+<div class="prostokat" id="G_dwadziesciacztery"></div>
+<div class="prostokat" id="G_dwadziesciapiec"></div>
+<div class="prostokat" id="G_dwadziesciaszesc"></div>
+<div class="prostokat" id="G_dwadziesciasiedem"></div>
+<div class="prostokat" id="G_dwadziesciaosiem"></div>
+<div class="prostokat" id="G_dwadziesciadziewiec"></div>
+<div class="prostokat" id="G_trzydziesci"></div>
+<div class="litera"><br>H</div>
+<div class="prostokat" id="H_jeden"></div>
+<div class="prostokat" id="H_dwa"></div>
+<div class="prostokat" id="H_trzy"></div>
+<div class="prostokat" id="H_cztery"></div>
+<div class="prostokat" id="H_piec" ></div>
+<div class="prostokat" id="H_szesc"></div>
+<div class="prostokat" id="H_siedem"></div>
+<div class="prostokat" id="H_osiem" ></div>
+<div class="prostokat" id="H_dziewiec"></div>
+<div class="prostokat" id="H_dziesiec"></div>
+<div class="prostokat" id="H_jedenascie"></div>
+<div class="prostokat" id="H_dwanascie"></div>
+<div class="prostokat" id="H_trzynascie"></div>
+<div class="prostokat" id="H_czternascie"></div>
+<div class="prostokat" id="H_pietnascie"></div>
+<div class="prostokat" id="H_szesnascie"></div>
+<div class="prostokat" id="H_siedemnascie"></div>
+<div class="prostokat" id="H_osiemnascie"></div>
+<div class="prostokat" id="H_dziewietnascie"></div>
+<div class="prostokat" id="H_dwadziescia"></div>
+<div class="prostokat" id="H_dwadziesciajeden"></div>
+<div class="prostokat" id="H_dwadziesciadwa"></div>
+<div class="prostokat" id="H_dwadziesciatrzy"></div>
+<div class="prostokat" id="H_dwadziesciacztery"></div>
+<div class="prostokat" id="H_dwadziesciapiec"></div>
+<div class="prostokat" id="H_dwadziesciaszesc"></div>
+<div class="prostokat" id="H_dwadziesciasiedem"></div>
+<div class="prostokat" id="H_dwadziesciaosiem"></div>
+<div class="prostokat" id="H_dwadziesciadziewiec"></div>
+<div class="prostokat" id="H_trzydziesci"></div>
+<div class="litera"><br>I</div>
+<div class="prostokat" id="I_jeden"></div>
+<div class="prostokat" id="I_dwa"></div>
+<div class="prostokat" id="I_trzy"></div>
+<div class="prostokat" id="I_cztery"></div>
+<div class="prostokat" id="I_piec" ></div>
+<div class="prostokat" id="I_szesc"></div>
+<div class="prostokat" id="I_siedem"></div>
+<div class="prostokat" id="I_osiem" ></div>
+<div class="prostokat" id="I_dziewiec"></div>
+<div class="prostokat" id="I_dziesiec"></div>
+<div class="prostokat" id="I_jedenascie"></div>
+<div class="prostokat" id="I_dwanascie"></div>
+<div class="prostokat" id="I_trzynascie"></div>
+<div class="prostokat" id="I_czternascie"></div>
+<div class="prostokat" id="I_pietnascie"></div>
+<div class="prostokat" id="I_szesnascie"></div>
+<div class="prostokat" id="I_siedemnascie"></div>
+<div class="prostokat" id="I_osiemnascie"></div>
+<div class="prostokat" id="I_dziewietnascie"></div>
+<div class="prostokat" id="I_dwadziescia"></div>
+<div class="prostokat" id="I_dwadziesciajeden"></div>
+<div class="prostokat" id="I_dwadziesciadwa"></div>
+<div class="prostokat" id="I_dwadziesciatrzy"></div>
+<div class="prostokat" id="I_dwadziesciacztery"></div>
+<div class="prostokat" id="I_dwadziesciapiec"></div>
+<div class="prostokat" id="I_dwadziesciaszesc"></div>
+<div class="prostokat" id="I_dwadziesciasiedem"></div>
+<div class="prostokat" id="I_dwadziesciaosiem"></div>
+<div class="prostokat" id="I_dwadziesciadziewiec"></div>
+<div class="prostokat" id="I_trzydziesci"></div>
+<div class="litera"><br>J</div>
+<div class="prostokat" id="J_jeden"></div>
+<div class="prostokat" id="J_dwa"></div>
+<div class="prostokat" id="J_trzy"></div>
+<div class="prostokat" id="J_cztery"></div>
+<div class="prostokat" id="J_piec" ></div>
+<div class="prostokat" id="J_szesc"></div>
+<div class="prostokat" id="J_siedem"></div>
+<div class="prostokat" id="J_osiem" ></div>
+<div class="prostokat" id="J_dziewiec"></div>
+<div class="prostokat" id="J_dziesiec"></div>
+<div class="prostokat" id="J_jedenascie"></div>
+<div class="prostokat" id="J_dwanascie"></div>
+<div class="prostokat" id="J_trzynascie"></div>
+<div class="prostokat" id="J_czternascie"></div>
+<div class="prostokat" id="J_pietnascie"></div>
+<div class="prostokat" id="J_szesnascie"></div>
+<div class="prostokat" id="J_siedemnascie"></div>
+<div class="prostokat" id="J_osiemnascie"></div>
+<div class="prostokat" id="J_dziewietnascie"></div>
+<div class="prostokat" id="J_dwadziescia"></div>
+<div class="prostokat" id="J_dwadziesciajeden"></div>
+<div class="prostokat" id="J_dwadziesciadwa"></div>
+<div class="prostokat" id="J_dwadziesciatrzy"></div>
+<div class="prostokat" id="J_dwadziesciacztery"></div>
+<div class="prostokat" id="J_dwadziesciapiec"></div>
+<div class="prostokat" id="J_dwadziesciaszesc"></div>
+<div class="prostokat" id="J_dwadziesciasiedem"></div>
+<div class="prostokat" id="J_dwadziesciaosiem"></div>
+<div class="prostokat" id="J_dwadziesciadziewiec"></div>
+<div class="prostokat" id="J_trzydziesci"></div>
+<div class="litera"><br>K</div>
+<div class="prostokat" id="K_jeden"></div>
+<div class="prostokat" id="K_dwa"></div>
+<div class="prostokat" id="K_trzy"></div>
+<div class="prostokat" id="K_cztery"></div>
+<div class="prostokat" id="K_piec" ></div>
+<div class="prostokat" id="K_szesc"></div>
+<div class="prostokat" id="K_siedem"></div>
+<div class="prostokat" id="K_osiem" ></div>
+<div class="prostokat" id="K_dziewiec"></div>
+<div class="prostokat" id="K_dziesiec"></div>
+<div class="prostokat" id="K_jedenascie"></div>
+<div class="prostokat" id="K_dwanascie"></div>
+<div class="prostokat" id="K_trzynascie"></div>
+<div class="prostokat" id="K_czternascie"></div>
+<div class="prostokat" id="K_pietnascie"></div>
+<div class="prostokat" id="K_szesnascie"></div>
+<div class="prostokat" id="K_siedemnascie"></div>
+<div class="prostokat" id="K_osiemnascie"></div>
+<div class="prostokat" id="K_dziewietnascie"></div>
+<div class="prostokat" id="K_dwadziescia"></div>
+<div class="prostokat" id="K_dwadziesciajeden"></div>
+<div class="prostokat" id="K_dwadziesciadwa"></div>
+<div class="prostokat" id="K_dwadziesciatrzy"></div>
+<div class="prostokat" id="K_dwadziesciacztery"></div>
+<div class="prostokat" id="K_dwadziesciapiec"></div>
+<div class="prostokat" id="K_dwadziesciaszesc"></div>
+<div class="prostokat" id="K_dwadziesciasiedem"></div>
+<div class="prostokat" id="K_dwadziesciaosiem"></div>
+<div class="prostokat" id="K_dwadziesciadziewiec"></div>
+<div class="prostokat" id="K_trzydziesci"></div>
+<div class="litera"><br>L</div>
+<div class="prostokat" id="L_jeden"></div>
+<div class="prostokat" id="L_dwa"></div>
+<div class="prostokat" id="L_trzy"></div>
+<div class="prostokat" id="L_cztery"></div>
+<div class="prostokat" id="L_piec" ></div>
+<div class="prostokat" id="L_szesc"></div>
+<div class="prostokat" id="L_siedem"></div>
+<div class="prostokat" id="L_osiem" ></div>
+<div class="prostokat" id="L_dziewiec"></div>
+<div class="prostokat" id="L_dziesiec"></div>
+<div class="prostokat" id="L_jedenascie"></div>
+<div class="prostokat" id="L_dwanascie"></div>
+<div class="prostokat" id="L_trzynascie"></div>
+<div class="prostokat" id="L_czternascie"></div>
+<div class="prostokat" id="L_pietnascie"></div>
+<div class="prostokat" id="L_szesnascie"></div>
+<div class="prostokat" id="L_siedemnascie"></div>
+<div class="prostokat" id="L_osiemnascie"></div>
+<div class="prostokat" id="L_dziewietnascie"></div>
+<div class="prostokat" id="L_dwadziescia"></div>
+<div class="prostokat" id="L_dwadziesciajeden"></div>
+<div class="prostokat" id="L_dwadziesciadwa"></div>
+<div class="prostokat" id="L_dwadziesciatrzy"></div>
+<div class="prostokat" id="L_dwadziesciacztery"></div>
+<div class="prostokat" id="L_dwadziesciapiec"></div>
+<div class="prostokat" id="L_dwadziesciaszesc"></div>
+<div class="prostokat" id="L_dwadziesciasiedem"></div>
+<div class="prostokat" id="L_dwadziesciaosiem"></div>
+<div class="prostokat" id="L_dwadziesciadziewiec"></div>
+<div class="prostokat" id="L_trzydziesci"></div>
+<div class="litera"><br>M</div>
+<div class="prostokat" id="M_jeden"></div>
+<div class="prostokat" id="M_dwa"></div>
+<div class="prostokat" id="M_trzy"></div>
+<div class="prostokat" id="M_cztery"></div>
+<div class="prostokat" id="M_piec" ></div>
+<div class="prostokat" id="M_szesc"></div>
+<div class="prostokat" id="M_siedem"></div>
+<div class="prostokat" id="M_osiem" ></div>
+<div class="prostokat" id="M_dziewiec"></div>
+<div class="prostokat" id="M_dziesiec"></div>
+<div class="prostokat" id="M_jedenascie"></div>
+<div class="prostokat" id="M_dwanascie"></div>
+<div class="prostokat" id="M_trzynascie"></div>
+<div class="prostokat" id="M_czternascie"></div>
+<div class="prostokat" id="M_pietnascie"></div>
+<div class="prostokat" id="M_szesnascie"></div>
+<div class="prostokat" id="M_siedemnascie"></div>
+<div class="prostokat" id="M_osiemnascie"></div>
+<div class="prostokat" id="M_dziewietnascie"></div>
+<div class="prostokat" id="M_dwadziescia"></div>
+<div class="prostokat" id="M_dwadziesciajeden"></div>
+<div class="prostokat" id="M_dwadziesciadwa"></div>
+<div class="prostokat" id="M_dwadziesciatrzy"></div>
+<div class="prostokat" id="M_dwadziesciacztery"></div>
+<div class="prostokat" id="M_dwadziesciapiec"></div>
+<div class="prostokat" id="M_dwadziesciaszesc"></div>
+<div class="prostokat" id="M_dwadziesciasiedem"></div>
+<div class="prostokat" id="M_dwadziesciaosiem"></div>
+<div class="prostokat" id="M_dwadziesciadziewiec"></div>
+<div class="prostokat" id="M_trzydziesci"></div>
+<div class="litera"><br>N</div>
+<div class="prostokat" id="N_jeden"></div>
+<div class="prostokat" id="N_dwa"></div>
+<div class="prostokat" id="N_trzy"></div>
+<div class="prostokat" id="N_cztery"></div>
+<div class="prostokat" id="N_piec" ></div>
+<div class="prostokat" id="N_szesc"></div>
+<div class="prostokat" id="N_siedem"></div>
+<div class="prostokat" id="N_osiem" ></div>
+<div class="prostokat" id="N_dziewiec"></div>
+<div class="prostokat" id="N_dziesiec"></div>
+<div class="prostokat" id="N_jedenascie"></div>
+<div class="prostokat" id="N_dwanascie"></div>
+<div class="prostokat" id="N_trzynascie"></div>
+<div class="prostokat" id="N_czternascie"></div>
+<div class="prostokat" id="N_pietnascie"></div>
+<div class="prostokat" id="N_szesnascie"></div>
+<div class="prostokat" id="N_siedemnascie"></div>
+<div class="prostokat" id="N_osiemnascie"></div>
+<div class="prostokat" id="N_dziewietnascie"></div>
+<div class="prostokat" id="N_dwadziescia"></div>
+<div class="prostokat" id="N_dwadziesciajeden"></div>
+<div class="prostokat" id="N_dwadziesciadwa"></div>
+<div class="prostokat" id="N_dwadziesciatrzy"></div>
+<div class="prostokat" id="N_dwadziesciacztery"></div>
+<div class="prostokat" id="N_dwadziesciapiec"></div>
+<div class="prostokat" id="N_dwadziesciaszesc"></div>
+<div class="prostokat" id="N_dwadziesciasiedem"></div>
+<div class="prostokat" id="N_dwadziesciaosiem"></div>
+<div class="prostokat" id="N_dwadziesciadziewiec"></div>
+<div class="prostokat" id="N_trzydziesci"></div>
+<div class="litera"><br>O</div>
+<div class="prostokat" id="O_jeden"></div>
+<div class="prostokat" id="O_dwa"></div>
+<div class="prostokat" id="O_trzy"></div>
+<div class="prostokat" id="O_cztery"></div>
+<div class="prostokat" id="O_piec" ></div>
+<div class="prostokat" id="O_szesc"></div>
+<div class="prostokat" id="O_siedem"></div>
+<div class="prostokat" id="O_osiem" ></div>
+<div class="prostokat" id="O_dziewiec"></div>
+<div class="prostokat" id="O_dziesiec"></div>
+<div class="prostokat" id="O_jedenascie"></div>
+<div class="prostokat" id="O_dwanascie"></div>
+<div class="prostokat" id="O_trzynascie"></div>
+<div class="prostokat" id="O_czternascie"></div>
+<div class="prostokat" id="O_pietnascie"></div>
+<div class="prostokat" id="O_szesnascie"></div>
+<div class="prostokat" id="O_siedemnascie"></div>
+<div class="prostokat" id="O_osiemnascie"></div>
+<div class="prostokat" id="O_dziewietnascie"></div>
+<div class="prostokat" id="O_dwadziescia"></div>
+<div class="prostokat" id="O_dwadziesciajeden"></div>
+<div class="prostokat" id="O_dwadziesciadwa"></div>
+<div class="prostokat" id="O_dwadziesciatrzy"></div>
+<div class="prostokat" id="O_dwadziesciacztery"></div>
+<div class="prostokat" id="O_dwadziesciapiec"></div>
+<div class="prostokat" id="O_dwadziesciaszesc"></div>
+<div class="prostokat" id="O_dwadziesciasiedem"></div>
+<div class="prostokat" id="O_dwadziesciaosiem"></div>
+<div class="prostokat" id="O_dwadziesciadziewiec"></div>
+<div class="prostokat" id="O_trzydziesci"></div>
+</div>
+</center>
+
+
+
+
+
+
+</div>
+</body>
+</html>

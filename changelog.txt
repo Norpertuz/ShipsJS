@@ -1,0 +1,20 @@
+21/11/2018 - Pocz¹tek. 
+Stworzono prototypow¹ planszê dla jednego z graczy.
+Stworzono dwie plansze: strzelania i plansze na statki dla jednego gracza.
+Dodano obslugê plików .txt s³u¿¹cych do przechowywania informacji o strzelaniu i trafieniach.
+22/11/2018
+Poprawiono graficzn¹ czêœæ strony.
+Dodano stronê g³ówn¹ z instrukcj¹ oraz wyborem gracza.
+Dodano obs³ugê dodatkowych plików .txt.
+Przeprowadzono testu funkcjonalnoœci gracza pierwszego.
+Dodano drugiego gracza.
+01/12/2018
+Dodano wiêksze plansze
+18/11/2019
+Poprawiono b³êdy, wersja manualna dzia³a bez problemu, zosta³a ona ulepszona, wersja na plikach posiada b³êdy na niektorych przegl¹darkach. Czasem infromacje z plików nie chc¹ siê wczytaæ.
+08/08/2020
+Poprawiono kolorystkê oraz naprawiono zwi¹zane z ni¹ b³êdy.
+Dodano informacje o kwadratach przeciwnika w wersji manualnej.
+Poprawiono b³¹d - nie mo¿na ju¿ ustawiaæ niebieskich kwadratów na planszy przeciwnika w manualnej wersji.
+16/08/2020
+Zaimplementowano bardzo du¿¹ planszê do wersji manualnej, z osobn¹ funkcjonalnoœci¹.

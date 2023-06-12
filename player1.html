@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Test</title>
+<style type="text/css">
+body {
+font-family: Sans-Serif;
+color:#333;
+ background-image:url("m2.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+
+#plansza
+{
+ background-image:url("tlo.gif");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-color:lightgray;
+float:left;
+width:650px;
+height:750px;
+border: 2px solid black;
+margin-bottom:10px;
+visibility:visible;
+}
+#plansza1
+{
+ background-image:url("m1.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+float:left;
+width:650px;
+height:750px;
+border: 2px solid black;
+margin-bottom:10px;
+margin-left:10px;
+visibility:visible;
+}
+.prostokat
+{
+border: 2px solid black;
+height:50px;
+width:50px;
+float:left;
+margin: 3px;
+background-color:white;
+}
+
+.prostokat:hover{
+cursor: pointer;
+
+}
+.Pprostokat
+{
+border: 2px solid black;
+height:50px;
+width:50px;
+float:left;
+margin: 3px;
+background-color:white;
+}
+
+.Pprostokat:hover{
+cursor: pointer;
+
+}
+.cyfra
+{
+border: 2px solid black;
+height:20px;
+width:50px;
+float:left;
+margin: 3px;
+font-weight:bold;
+}
+.litera
+{
+border: 2px solid black;
+height:50px;
+width:20px;
+float:left;
+margin:3px;
+margin-left:6px;
+font-weight:bold;
+}
+
+
+/*this is only for webkit, not opera*/
+input[type='range'] {
+	-webkit-appearance: none;
+	padding-left: 2px;
+	padding-right: 2px;
+	-webkit-border-radius: 5px;  
+	background-image: -webkit-linear-gradient(top, #000, #333, #0000;
+}  
+
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<div id="container" style="height:780px;float:left;width:2000px;">
+<div id = "plansza"> 
+<center>
+<h1>Twoja Plansza</h1>
+<div class="cyfra"  style="margin-left: 36px;">1</div>
+<div class="cyfra">2</div>
+<div class="cyfra">3</div>
+<div class="cyfra">4</div>
+<div class="cyfra">5</div>
+<div class="cyfra">6</div>
+<div class="cyfra">7</div>
+<div class="cyfra">8</div>
+<div class="cyfra">9</div>
+<div class="cyfra">10</div>
+<div class="litera"><br>A</div>
+<div class="prostokat" id="A_jeden" ></div>
+<div class="prostokat" id="A_dwa"></div>
+<div class="prostokat" id="A_trzy"></div>
+<div class="prostokat" id="A_cztery"></div>
+<div class="prostokat" id="A_piec" ></div>
+<div class="prostokat" id="A_szesc"></div>
+<div class="prostokat" id="A_siedem"></div>
+<div class="prostokat" id="A_osiem" ></div>
+<div class="prostokat" id="A_dziewiec"></div>
+<div class="prostokat" id="A_dziesiec"></div>
+<div class="litera"><br>B</div>
+<div class="prostokat" id="B_jeden"></div>
+<div class="prostokat" id="B_dwa"></div>
+<div class="prostokat" id="B_trzy"></div>
+<div class="prostokat" id="B_cztery"></div>
+<div class="prostokat" id="B_piec" ></div>
+<div class="prostokat" id="B_szesc"></div>
+<div class="prostokat" id="B_siedem"></div>
+<div class="prostokat" id="B_osiem" ></div>
+<div class="prostokat" id="B_dziewiec"></div>
+<div class="prostokat" id="B_dziesiec"></div>
+<div class="litera"><br>C</div>
+<div class="prostokat" id="C_jeden"></div>
+<div class="prostokat" id="C_dwa"></div>
+<div class="prostokat" id="C_trzy"></div>
+<div class="prostokat" id="C_cztery"></div>
+<div class="prostokat" id="C_piec" ></div>
+<div class="prostokat" id="C_szesc"></div>
+<div class="prostokat" id="C_siedem"></div>
+<div class="prostokat" id="C_osiem" ></div>
+<div class="prostokat" id="C_dziewiec"></div>
+<div class="prostokat" id="C_dziesiec"></div>
+<div class="litera"><br>D</div>
+<div class="prostokat" id="D_jeden"></div>
+<div class="prostokat" id="D_dwa"></div>
+<div class="prostokat" id="D_trzy"></div>
+<div class="prostokat" id="D_cztery"></div>
+<div class="prostokat" id="D_piec" ></div>
+<div class="prostokat" id="D_szesc"></div>
+<div class="prostokat" id="D_siedem"></div>
+<div class="prostokat" id="D_osiem" ></div>
+<div class="prostokat" id="D_dziewiec"></div>
+<div class="prostokat" id="D_dziesiec"></div>
+<div class="litera"><br>E</div>
+<div class="prostokat" id="E_jeden"></div>
+<div class="prostokat" id="E_dwa"></div>
+<div class="prostokat" id="E_trzy"></div>
+<div class="prostokat" id="E_cztery"></div>
+<div class="prostokat" id="E_piec" ></div>
+<div class="prostokat" id="E_szesc"></div>
+<div class="prostokat" id="E_siedem"></div>
+<div class="prostokat" id="E_osiem" ></div>
+<div class="prostokat" id="E_dziewiec"></div>
+<div class="prostokat" id="E_dziesiec"></div>
+<div class="litera"><br>F</div>
+<div class="prostokat" id="F_jeden"></div>
+<div class="prostokat" id="F_dwa"></div>
+<div class="prostokat" id="F_trzy"></div>
+<div class="prostokat" id="F_cztery"></div>
+<div class="prostokat" id="F_piec" ></div>
+<div class="prostokat" id="F_szesc"></div>
+<div class="prostokat" id="F_siedem"></div>
+<div class="prostokat" id="F_osiem" ></div>
+<div class="prostokat" id="F_dziewiec"></div>
+<div class="prostokat" id="F_dziesiec"></div>
+<div class="litera"><br>G</div>
+<div class="prostokat" id="G_jeden"></div>
+<div class="prostokat" id="G_dwa"></div>
+<div class="prostokat" id="G_trzy"></div>
+<div class="prostokat" id="G_cztery"></div>
+<div class="prostokat" id="G_piec" ></div>
+<div class="prostokat" id="G_szesc"></div>
+<div class="prostokat" id="G_siedem"></div>
+<div class="prostokat" id="G_osiem" ></div>
+<div class="prostokat" id="G_dziewiec"></div>
+<div class="prostokat" id="G_dziesiec"></div>
+<div class="litera"><br>H</div>
+<div class="prostokat" id="H_jeden"></div>
+<div class="prostokat" id="H_dwa"></div>
+<div class="prostokat" id="H_trzy"></div>
+<div class="prostokat" id="H_cztery"></div>
+<div class="prostokat" id="H_piec" ></div>
+<div class="prostokat" id="H_szesc"></div>
+<div class="prostokat" id="H_siedem"></div>
+<div class="prostokat" id="H_osiem" ></div>
+<div class="prostokat" id="H_dziewiec"></div>
+<div class="prostokat" id="H_dziesiec"></div>
+<div class="litera"><br>I</div>
+<div class="prostokat" id="I_jeden"></div>
+<div class="prostokat" id="I_dwa"></div>
+<div class="prostokat" id="I_trzy"></div>
+<div class="prostokat" id="I_cztery"></div>
+<div class="prostokat" id="I_piec" ></div>
+<div class="prostokat" id="I_szesc"></div>
+<div class="prostokat" id="I_siedem"></div>
+<div class="prostokat" id="I_osiem" ></div>
+<div class="prostokat" id="I_dziewiec"></div>
+<div class="prostokat" id="I_dziesiec"></div>
+<div class="litera"><br>J</div>
+<div class="prostokat" id="J_jeden"></div>
+<div class="prostokat" id="J_dwa"></div>
+<div class="prostokat" id="J_trzy"></div>
+<div class="prostokat" id="J_cztery"></div>
+<div class="prostokat" id="J_piec" ></div>
+<div class="prostokat" id="J_szesc"></div>
+<div class="prostokat" id="J_siedem"></div>
+<div class="prostokat" id="J_osiem" ></div>
+<div class="prostokat" id="J_dziewiec"></div>
+<div class="prostokat" id="J_dziesiec"></div>
+</div>
+</center>
+<div id = "plansza1"> 
+<center>
+<h1>Strzelanie</h1>
+<div class="cyfra"  style="margin-left: 36px;">1</div>
+<div class="cyfra">2</div>
+<div class="cyfra">3</div>
+<div class="cyfra">4</div>
+<div class="cyfra">5</div>
+<div class="cyfra">6</div>
+<div class="cyfra">7</div>
+<div class="cyfra">8</div>
+<div class="cyfra">9</div>
+<div class="cyfra">10</div>
+<div class="litera"><br>A</div>
+<div class="Pprostokat" id="PA_jeden" ></div>
+<div class="Pprostokat" id="PA_dwa"></div>
+<div class="Pprostokat" id="PA_trzy"></div>
+<div class="Pprostokat" id="PA_cztery"></div>
+<div class="Pprostokat" id="PA_piec" ></div>
+<div class="Pprostokat" id="PA_szesc"></div>
+<div class="Pprostokat" id="PA_siedem"></div>
+<div class="Pprostokat" id="PA_osiem" ></div>
+<div class="Pprostokat" id="PA_dziewiec"></div>
+<div class="Pprostokat" id="PA_dziesiec"></div>
+<div class="litera"><br>B</div>
+<div class="Pprostokat" id="PB_jeden"></div>
+<div class="Pprostokat" id="PB_dwa"></div>
+<div class="Pprostokat" id="PB_trzy"></div>
+<div class="Pprostokat" id="PB_cztery"></div>
+<div class="Pprostokat" id="PB_piec" ></div>
+<div class="Pprostokat" id="PB_szesc"></div>
+<div class="Pprostokat" id="PB_siedem"></div>
+<div class="Pprostokat" id="PB_osiem" ></div>
+<div class="Pprostokat" id="PB_dziewiec"></div>
+<div class="Pprostokat" id="PB_dziesiec"></div>
+<div class="litera"><br>C</div>
+<div class="Pprostokat" id="PC_jeden"></div>
+<div class="Pprostokat" id="PC_dwa"></div>
+<div class="Pprostokat" id="PC_trzy"></div>
+<div class="Pprostokat" id="PC_cztery"></div>
+<div class="Pprostokat" id="PC_piec" ></div>
+<div class="Pprostokat" id="PC_szesc"></div>
+<div class="Pprostokat" id="PC_siedem"></div>
+<div class="Pprostokat" id="PC_osiem" ></div>
+<div class="Pprostokat" id="PC_dziewiec"></div>
+<div class="Pprostokat" id="PC_dziesiec"></div>
+<div class="litera"><br>D</div>
+<div class="Pprostokat" id="PD_jeden"></div>
+<div class="Pprostokat" id="PD_dwa"></div>
+<div class="Pprostokat" id="PD_trzy"></div>
+<div class="Pprostokat" id="PD_cztery"></div>
+<div class="Pprostokat" id="PD_piec" ></div>
+<div class="Pprostokat" id="PD_szesc"></div>
+<div class="Pprostokat" id="PD_siedem"></div>
+<div class="Pprostokat" id="PD_osiem" ></div>
+<div class="Pprostokat" id="PD_dziewiec"></div>
+<div class="Pprostokat" id="PD_dziesiec"></div>
+<div class="litera"><br>E</div>
+<div class="Pprostokat" id="PE_jeden"></div>
+<div class="Pprostokat" id="PE_dwa"></div>
+<div class="Pprostokat" id="PE_trzy"></div>
+<div class="Pprostokat" id="PE_cztery"></div>
+<div class="Pprostokat" id="PE_piec" ></div>
+<div class="Pprostokat" id="PE_szesc"></div>
+<div class="Pprostokat" id="PE_siedem"></div>
+<div class="Pprostokat" id="PE_osiem" ></div>
+<div class="Pprostokat" id="PE_dziewiec"></div>
+<div class="Pprostokat" id="PE_dziesiec"></div>
+<div class="litera"><br>F</div>
+<div class="Pprostokat" id="PF_jeden"></div>
+<div class="Pprostokat" id="PF_dwa"></div>
+<div class="Pprostokat" id="PF_trzy"></div>
+<div class="Pprostokat" id="PF_cztery"></div>
+<div class="Pprostokat" id="PF_piec" ></div>
+<div class="Pprostokat" id="PF_szesc"></div>
+<div class="Pprostokat" id="PF_siedem"></div>
+<div class="Pprostokat" id="PF_osiem" ></div>
+<div class="Pprostokat" id="PF_dziewiec"></div>
+<div class="Pprostokat" id="PF_dziesiec"></div>
+<div class="litera"><br>G</div>
+<div class="Pprostokat" id="PG_jeden"></div>
+<div class="Pprostokat" id="PG_dwa"></div>
+<div class="Pprostokat" id="PG_trzy"></div>
+<div class="Pprostokat" id="PG_cztery"></div>
+<div class="Pprostokat" id="PG_piec" ></div>
+<div class="Pprostokat" id="PG_szesc"></div>
+<div class="Pprostokat" id="PG_siedem"></div>
+<div class="Pprostokat" id="PG_osiem" ></div>
+<div class="Pprostokat" id="PG_dziewiec"></div>
+<div class="Pprostokat" id="PG_dziesiec"></div>
+<div class="litera"><br>H</div>
+<div class="Pprostokat" id="PH_jeden"></div>
+<div class="Pprostokat" id="PH_dwa"></div>
+<div class="Pprostokat" id="PH_trzy"></div>
+<div class="Pprostokat" id="PH_cztery"></div>
+<div class="Pprostokat" id="PH_piec" ></div>
+<div class="Pprostokat" id="PH_szesc"></div>
+<div class="Pprostokat" id="PH_siedem"></div>
+<div class="Pprostokat" id="PH_osiem" ></div>
+<div class="Pprostokat" id="PH_dziewiec"></div>
+<div class="Pprostokat" id="PH_dziesiec"></div>
+<div class="litera"><br>I</div>
+<div class="Pprostokat" id="PI_jeden"></div>
+<div class="Pprostokat" id="PI_dwa"></div>
+<div class="Pprostokat" id="PI_trzy"></div>
+<div class="Pprostokat" id="PI_cztery"></div>
+<div class="Pprostokat" id="PI_piec" ></div>
+<div class="Pprostokat" id="PI_szesc"></div>
+<div class="Pprostokat" id="PI_siedem"></div>
+<div class="Pprostokat" id="PI_osiem" ></div>
+<div class="Pprostokat" id="PI_dziewiec"></div>
+<div class="Pprostokat" id="PI_dziesiec"></div>
+<div class="litera"><br>J</div>
+<div class="Pprostokat" id="PJ_jeden"></div>
+<div class="Pprostokat" id="PJ_dwa"></div>
+<div class="Pprostokat" id="PJ_trzy"></div>
+<div class="Pprostokat" id="PJ_cztery"></div>
+<div class="Pprostokat" id="PJ_piec" ></div>
+<div class="Pprostokat" id="PJ_szesc"></div>
+<div class="Pprostokat" id="PJ_siedem"></div>
+<div class="Pprostokat" id="PJ_osiem" ></div>
+<div class="Pprostokat" id="PJ_dziewiec"></div>
+<div class="Pprostokat" id="PJ_dziesiec"></div>
+</div>
+</center>
+</div>
+
+<div id="logs" style="float:left; width:1350px;height:400; background-color:lightgray; font-size:20px; opacity:0.8; border: 2px solid black; margin-bottom:15px;color:black;">
+Logs:<br>
+Zdarzenie: <div id="log"></div><br>
+Ilość statków (max:iles): <div id="niebieskie"></div><br>
+<button id="zeruj">Wyzeruj plansze(koniec gry)</button> <br>
+<button id="p2">Pokaz/Ukryj swoją planszę</button> <br> <br>
+<button id="zatwierdz" style="float:left;width:200px;height:50px; margin-left:20px;">Strzel w zaznaczony kwadrat</button>
+<h2 id="informacjaz" style="float:left;width:100px;height:30px; margin-left:50px;">info</h2>
+<button id="sprawdz" style="float:left;width:200px;height:50px; margin-left:50px;">Sprawdz czy trafiono</button>
+<h2 id="informacja" style="float:left;width:100px;height:30px; margin-left:50px;">info</h2>
+<button id="sprawdz1" style="float:left;width:200px;height:50px; margin-left:90px;">Sprawdz czy przeciwnik strzelil</button>
+<h2 id="informacja1" style="float:left;width:100px;height:30px; margin-left:50px;">info</h2>
+
+</div>
+<script type="text/javascript">
+$( document ).ready(function() {
+  $(".prostokat").css("background-color","white");
+    $(".Pprostokat").css("background-color","white");
+    console.log( "ready!" );
+
+document.oncontextmenu = function() {return false;};
+var wybor;
+var przycisk;
+var ilosc_niebieskich=0;
+var tak=0;
+var ukrycie='0';
+var fire=0;
+var strzal_wroga;
+var czy_trafilem=2;
+var tura=0;
+var choosen=0;
+var strzal_wroga;
+
+
+
+
+//stawianie statkow lub czegos innego (niebieski) // przycisk S
+$(".prostokat").mouseover(function( event ){
+wybor = event.target.id;
+if(event.target.style.backgroundColor != "blue"){
+tak=1;
+}
+});
+
+$(".prostokat").mouseleave(function() {
+wybor = null;
+   tak=0
+  });
+
+
+$("body").keydown(function( event ){
+przycisk = event.which;
+ if(przycisk == "83" && tak==1)
+ {
+  ilosc_niebieskich++;
+    $('#' + wybor).css("background-color","blue");
+    $( "#log" ).html( "Umieszczono (Niebieski): " + wybor );
+  $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+  tak=0;
+ }
+    });
+
+//alert(event.target.style.backgroundColor); - sprawdzanie koloru tła
+
+
+//LPM //strzelanie
+$( ".Pprostokat" ).click(function( event ) {
+wybor = event.target.id;
+if(event.target.style.backgroundColor != "yellow" && fire == 0)
+{
+  $( "#log" ).html( "Wybrano: " + wybor );
+  $('#' + wybor).css("background-color","yellow");
+fire=wybor;
+
+}
+});
+//PPM //usuwanie
+$( ".Pprostokat" ).contextmenu(function( event ) {
+wybor = event.target.id;
+if(event.target.style.backgroundColor != "white" && choosen != 1)
+{
+  $( "#log" ).html( "Cofnięto wybór: " + wybor );
+  $('#' + wybor).css("background-color","white");
+  
+  fire=0;
+
+}
+});
+
+
+//zarowanie planszy
+$( "#zeruj" ).click(function( event ) {
+  $( "#log" ).html( "plansze zostały wyzerowane");
+  $(".prostokat").css("background-color","white");
+    $(".Pprostokat").css("background-color","white");
+	window.open("wymazanie1.php?width=oczekiwanie");
+	window.open("wymazanie1f.php?width=oczekiwanie");
+	window.open("wymazanie2.php?width=oczekiwanie");
+	window.open("wymazanie2f.php?width=oczekiwanie");
+   ilosc_niebieskich=0;
+     $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+});
+
+
+//ukrywanie planszy
+$("#p2").click(function(event){
+
+switch(ukrycie)
+{
+case '1': {ukrycie = '0'; $("#plansza").css("visibility","hidden");} break;
+case '0': {ukrycie ='1'; $("#plansza").css("visibility","visible");} break;
+
+}
+
+});
+
+$("#zatwierdz").click(function(event){
+
+window.open("main.php?width=" + fire);
+choosen=1;
+document.getElementById("informacjaz").innerHTML=fire;
+
+});
+/*
+$("#zatwierdz").mouseleave(function(event){
+
+document.getElementById("informacjaz").innerHTML="info";
+
+});
+*/
+///////sprawdzanie czy trafilem
+
+$("#sprawdz").mouseover(function(event){
+$("#informacja").load("odpowiedz2.txt");
+
+
+});
+ 
+
+$("#sprawdz").click(function(event){
+
+
+
+//window.open("wymazanie2.php?width=oczekiwanie");
+//test
+
+czy_trafilem=document.getElementById("informacja").innerHTML;
+
+
+ switch(czy_trafilem)
+{
+case '1': {alert("trafiony"); $('#' + fire).css("background-color","red");czy_trafilem=2;fire=0;}break;
+case '0': {alert("pudlo"); $('#' + fire).css("background-color","green");czy_trafilem=2;fire=0;}break;
+}
+
+});
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ///////sprawdzanie czy wrog strzelil
+ 
+ $("#sprawdz1").click(function(event){
+
+$("#informacja1").load("p2fire.txt");
+
+window.open("wymazanie2f.php?width=oczekiwanie");
+
+
+});
+
+$("#sprawdz1").mouseover(function(event){
+
+strzal_wroga=document.getElementById("informacja1").innerHTML;
+if(document.getElementById(strzal_wroga).style.backgroundColor=="blue"){
+ window.open("trafienie1.php?width=1");
+$('#' + strzal_wroga).css("background-color","red");
+ilosc_niebieskich--;
+ $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+ $( "#log" ).html( "Twoj statek trafiony: " + strzal_wroga);
+strzal_wroga =0;
+tak=0;
+}
+if(document.getElementById(strzal_wroga).style.backgroundColor=="white")
+{
+ window.open("trafienie1.php?width=0");
+$( "#log" ).html( "Pudlo: " + strzal_wroga);
+$('#' + strzal_wroga).css("background-color","green");
+ window.open("trafienie1.php?width=0");
+strzal_wroga=0;
+tak=0;
+}
+
+
+});
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+//window.open("main.php?width=" + width + "&height=" + height);
+
+});
+</script>
+</body>
+</html>

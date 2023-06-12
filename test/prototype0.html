@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Test</title>
+<style type="text/css">
+body {
+font-family: Sans-Serif;
+color:#333;
+}
+
+
+#plansza
+{
+float:left;
+width:1150px;
+height:1140px;
+border: 2px solid black;
+margin-bottom:10px;
+}
+.prostokat
+{
+border: 2px solid black;
+height:100px;
+width:100px;
+float:left;
+margin: 3px;
+background-color:white;
+}
+
+.prostokat:hover{
+cursor: pointer;
+
+}
+
+.cyfra
+{
+border: 2px solid black;
+height:20px;
+width:100px;
+float:left;
+margin: 3px;
+font-weight:bold;
+}
+.litera
+{
+border: 2px solid black;
+height:100px;
+width:20px;
+float:left;
+margin:3px;
+margin-left:6px;
+font-weight:bold;
+}
+
+
+/*this is only for webkit, not opera*/
+input[type='range'] {
+	-webkit-appearance: none;
+	padding-left: 2px;
+	padding-right: 2px;
+	-webkit-border-radius: 5px;  
+	background-image: -webkit-linear-gradient(top, #000, #333, #0000;
+}  
+
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div id = "plansza">
+<center>
+<div class="cyfra"  style="margin-left: 36px;">1</div>
+<div class="cyfra">2</div>
+<div class="cyfra">3</div>
+<div class="cyfra">4</div>
+<div class="cyfra">5</div>
+<div class="cyfra">6</div>
+<div class="cyfra">7</div>
+<div class="cyfra">8</div>
+<div class="cyfra">9</div>
+<div class="cyfra">10</div>
+<div class="litera"><br><br>A</div>
+<div class="prostokat" id="A_jeden" ></div>
+<div class="prostokat" id="A_dwa"></div>
+<div class="prostokat" id="A_trzy"></div>
+<div class="prostokat" id="A_cztery"></div>
+<div class="prostokat" id="A_piec" ></div>
+<div class="prostokat" id="A_szesc"></div>
+<div class="prostokat" id="A_siedem"></div>
+<div class="prostokat" id="A_osiem" ></div>
+<div class="prostokat" id="A_dziewiec"></div>
+<div class="prostokat" id="A_dziesiec"></div>
+<div class="litera"><br><br>B</div>
+<div class="prostokat" id="B_jeden"></div>
+<div class="prostokat" id="B_dwa"></div>
+<div class="prostokat" id="B_trzy"></div>
+<div class="prostokat" id="B_cztery"></div>
+<div class="prostokat" id="B_piec" ></div>
+<div class="prostokat" id="B_szesc"></div>
+<div class="prostokat" id="B_siedem"></div>
+<div class="prostokat" id="B_osiem" ></div>
+<div class="prostokat" id="B_dziewiec"></div>
+<div class="prostokat" id="B_dziesiec"></div>
+<div class="litera"><br><br>C</div>
+<div class="prostokat" id="C_jeden"></div>
+<div class="prostokat" id="C_dwa"></div>
+<div class="prostokat" id="C_trzy"></div>
+<div class="prostokat" id="C_cztery"></div>
+<div class="prostokat" id="C_piec" ></div>
+<div class="prostokat" id="C_szesc"></div>
+<div class="prostokat" id="C_siedem"></div>
+<div class="prostokat" id="C_osiem" ></div>
+<div class="prostokat" id="C_dziewiec"></div>
+<div class="prostokat" id="C_dziesiec"></div>
+<div class="litera"><br><br>D</div>
+<div class="prostokat" id="D_jeden"></div>
+<div class="prostokat" id="D_dwa"></div>
+<div class="prostokat" id="D_trzy"></div>
+<div class="prostokat" id="D_cztery"></div>
+<div class="prostokat" id="D_piec" ></div>
+<div class="prostokat" id="D_szesc"></div>
+<div class="prostokat" id="D_siedem"></div>
+<div class="prostokat" id="D_osiem" ></div>
+<div class="prostokat" id="D_dziewiec"></div>
+<div class="prostokat" id="D_dziesiec"></div>
+<div class="litera"><br><br>E</div>
+<div class="prostokat" id="E_jeden"></div>
+<div class="prostokat" id="E_dwa"></div>
+<div class="prostokat" id="E_trzy"></div>
+<div class="prostokat" id="E_cztery"></div>
+<div class="prostokat" id="E_piec" ></div>
+<div class="prostokat" id="E_szesc"></div>
+<div class="prostokat" id="E_siedem"></div>
+<div class="prostokat" id="E_osiem" ></div>
+<div class="prostokat" id="E_dziewiec"></div>
+<div class="prostokat" id="E_dziesiec"></div>
+<div class="litera"><br><br>F</div>
+<div class="prostokat" id="F_jeden"></div>
+<div class="prostokat" id="F_dwa"></div>
+<div class="prostokat" id="F_trzy"></div>
+<div class="prostokat" id="F_cztery"></div>
+<div class="prostokat" id="F_piec" ></div>
+<div class="prostokat" id="F_szesc"></div>
+<div class="prostokat" id="F_siedem"></div>
+<div class="prostokat" id="F_osiem" ></div>
+<div class="prostokat" id="F_dziewiec"></div>
+<div class="prostokat" id="F_dziesiec"></div>
+<div class="litera"><br><br>G</div>
+<div class="prostokat" id="G_jeden"></div>
+<div class="prostokat" id="G_dwa"></div>
+<div class="prostokat" id="G_trzy"></div>
+<div class="prostokat" id="G_cztery"></div>
+<div class="prostokat" id="G_piec" ></div>
+<div class="prostokat" id="G_szesc"></div>
+<div class="prostokat" id="G_siedem"></div>
+<div class="prostokat" id="G_osiem" ></div>
+<div class="prostokat" id="G_dziewiec"></div>
+<div class="prostokat" id="G_dziesiec"></div>
+<div class="litera"><br><br>H</div>
+<div class="prostokat" id="H_jeden"></div>
+<div class="prostokat" id="H_dwa"></div>
+<div class="prostokat" id="H_trzy"></div>
+<div class="prostokat" id="H_cztery"></div>
+<div class="prostokat" id="H_piec" ></div>
+<div class="prostokat" id="H_szesc"></div>
+<div class="prostokat" id="H_siedem"></div>
+<div class="prostokat" id="H_osiem" ></div>
+<div class="prostokat" id="H_dziewiec"></div>
+<div class="prostokat" id="H_dziesiec"></div>
+<div class="litera"><br><br>I</div>
+<div class="prostokat" id="I_jeden"></div>
+<div class="prostokat" id="I_dwa"></div>
+<div class="prostokat" id="I_trzy"></div>
+<div class="prostokat" id="I_cztery"></div>
+<div class="prostokat" id="I_piec" ></div>
+<div class="prostokat" id="I_szesc"></div>
+<div class="prostokat" id="I_siedem"></div>
+<div class="prostokat" id="I_osiem" ></div>
+<div class="prostokat" id="I_dziewiec"></div>
+<div class="prostokat" id="I_dziesiec"></div>
+<div class="litera"><br><br>J</div>
+<div class="prostokat" id="J_jeden"></div>
+<div class="prostokat" id="J_dwa"></div>
+<div class="prostokat" id="J_trzy"></div>
+<div class="prostokat" id="J_cztery"></div>
+<div class="prostokat" id="J_piec" ></div>
+<div class="prostokat" id="J_szesc"></div>
+<div class="prostokat" id="J_siedem"></div>
+<div class="prostokat" id="J_osiem" ></div>
+<div class="prostokat" id="J_dziewiec"></div>
+<div class="prostokat" id="J_dziesiec"></div>
+</div>
+<div id="logs" style="margin-left:40px; float:left; width:300px;height:400; background-color:lightgray; font-size:20px;">
+Logs:<br>
+Zdarzenie: <div id="log"></div><br>
+Ilosc Kwadratow: <div id="niebieskie"></div><br>
+<button id="zeruj">Wyzeruj plansze</button> <br>
+<button id="p2">Plansza druga (nie dziala)</button> <br>
+</div>
+<script type="text/javascript">
+document.oncontextmenu = function() {return false;};
+var wybor;
+var przycisk;
+var ilosc_niebieskich=0;
+var tak=0;
+//stawianie statkow lub czegos innego (niebieski) // przycisk S
+
+$(".prostokat").mouseover(function( event ){
+wybor = event.target.id;
+if(event.target.style.backgroundColor != "blue"){
+tak=1;
+}
+});
+
+$(".prostokat").mouseleave(function() {
+wybor = null;
+   tak=0
+  });
+
+
+$("body").keydown(function( event ){
+przycisk = event.which;
+ if(przycisk == "83" && tak==1)
+ {
+  ilosc_niebieskich++;
+    $('#' + wybor).css("background-color","blue");
+    $( "#log" ).html( "blue depolyed in: " + wybor );
+  $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+  tak=0;
+ }
+    });
+
+//alert(event.target.style.backgroundColor); - sprawdzanie koloru tła
+
+
+//LPM
+$( ".prostokat" ).click(function( event ) {
+wybor = event.target.id;
+if(event.target.style.backgroundColor == "blue")
+{
+ilosc_niebieskich--;
+ $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+}
+  $( "#log" ).html( "red deployed: " + wybor );
+  $('#' + wybor).css("background-color","red");
+});
+//PPM
+$( ".prostokat" ).contextmenu(function( event ) {
+wybor = event.target.id;
+if(event.target.style.backgroundColor == "blue")
+{
+ilosc_niebieskich--;
+ $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+}
+  $( "#log" ).html( "green deployed: " + wybor );
+  $('#' + wybor).css("background-color","green");
+});
+
+
+
+//zarowanie planszy
+$( "#zeruj" ).click(function( event ) {
+  $( "#log" ).html( "plansza: wyzerowano");
+  $(".prostokat").css("background-color","white");
+   ilosc_niebieskich=0;
+     $( "#niebieskie" ).html( "Ilosc Niebieskich Kwadratow: " + ilosc_niebieskich );
+});
+
+
+
+</script>
+</body>
+</html>
